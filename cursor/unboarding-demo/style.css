@@ -1,0 +1,128 @@
+body {
+    background: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.login-section {
+    flex: 1;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-emoji {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin: 0 0 24px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f6f6f6;
+    margin-bottom: 4px;
+}
+
+.forgot {
+    font-size: 0.9rem;
+    color: #222;
+    text-decoration: underline;
+    margin-bottom: 16px;
+    align-self: flex-end;
+}
+
+button[type="submit"] {
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #333;
+}
+
+.signup-link {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: #888;
+}
+.signup-link a {
+    color: #111;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.art-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.art-blob {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at 60% 40%, #fbb1a8 0%, #e0aaff 60%, #a1c4fd 100%);
+    border-radius: 50% 60% 50% 60% / 60% 50% 60% 50%;
+    filter: blur(2px);
+    position: relative;
+    box-shadow: 0 8px 40px 0 rgba(200,100,200,0.15);
+    opacity: 0.85;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        min-height: 700px;
+    }
+    .art-section {
+        min-height: 200px;
+    }
+    .art-blob {
+        width: 220px;
+        height: 220px;
+    }
+}
